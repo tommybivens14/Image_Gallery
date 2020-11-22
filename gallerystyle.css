@@ -1,0 +1,98 @@
+h1 {
+    text-align: center;
+    color: #F5F6F7;
+    border: 2px solid darkgrey
+}
+
+body {
+    background-color: #5A6666;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-style: solid;
+    border-color: darkgrey;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: transparent;
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+  }
+
+  .container:hover .image {
+    -webkit-transition: all 350ms ease-in-out;
+    -o-transition: all 350ms ease-in-out;
+    transition: all 350ms ease-in-out;
+    -webkit-filter: blur(1.2px);
+    -moz-filter: blur(1.2px);
+    -ms-filter: blur(1.2px);
+    -o-filter: blur(1.2px);
+    filter: blur(3px);
+    transform: scale(1.03);
+}
+  
+  .text {
+    color: white;
+    font-size: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 8px;
+    justify-content: center;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 23%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 560px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
